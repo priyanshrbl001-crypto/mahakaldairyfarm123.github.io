@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>महाकाल डेयरी फार्म | Sanjay Singh</title>
+
+    <meta name="description"
+          content="महाकाल डेयरी फार्म - नथईपुर, रायबरेली। ताजा गाय और भैंस का दूध एवं डेयरी उत्पाद।">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7faf7;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 15px 7%;
+
+            background: rgba(255,255,255,0.97);
+
+            box-shadow: 0 3px 15px rgba(0,0,0,0.10);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .logo-icon {
+            font-size: 35px;
+        }
+
+        .logo-text span {
+            color: #16843b;
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #222;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #16843b;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+
+            min-height: 92vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 40px 20px;
+
+            color: white;
+
+            background:
+            linear-gradient(
+                rgba(0,0,0,0.55),
+                rgba(0,0,0,0.55)
+            ),
+            url("https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=1600&q=85");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-small {
+            font-size: 18px;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            margin-bottom: 15px;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.4);
+        }
+
+        .hero h2 {
+            font-size: 27px;
+            color: #ffe28a;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 14px 27px;
+            margin: 5px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+        }
+
+        .btn-green {
+            background: #16843b;
+            color: white;
+        }
+
+        .btn-green:hover {
+            background: #0c652c;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .btn-call {
+            background: #ffffff;
+            color: #16843b;
+        }
+
+        /* ================= SECTION ================= */
+
+        .section {
+            padding: 80px 7%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 36px;
+            color: #16843b;
+            margin-bottom: 12px;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+
+            width: 65px;
+            height: 4px;
+
+            background: #d4a017;
+
+            margin: 12px auto 25px;
+
+            border-radius: 10px;
+        }
+
+        .section-description {
+            max-width: 750px;
+            margin: auto;
+            color: #666;
+            font-size: 17px;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            background: white;
+        }
+
+        .about-container {
+            max-width: 1000px;
+            margin: 45px auto 0;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 25px;
+        }
+
+        .about-card {
+            padding: 35px;
+
+            border-radius: 20px;
+
+            background: #f7faf7;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+
+        .about-card h3 {
+            color: #16843b;
+            margin-bottom: 15px;
+            font-size: 23px;
+        }
+
+        .owner {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* ================= PRODUCTS ================= */
+
+        .products {
+            margin-top: 50px;
+
+            display: grid;
+
+            grid-template-columns:
+            repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .product-card {
+
+            background: white;
+
+            padding: 35px 25px;
+
+            border-radius: 20px;
+
+            box-shadow:
+            0 7px 25px rgba(0,0,0,0.08);
+
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .product-icon {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            font-size: 23px;
+            margin-bottom: 8px;
+        }
+
+        .product-card p {
+            color: #666;
+        }
+
+        /* ================= MILK PRICE ================= */
+
+        .milk-section {
+            background: #eef8f0;
+        }
+
+        .milk-prices {
+
+            max-width: 900px;
+
+            margin: 45px auto 0;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 25px;
+        }
+
+        .milk-card {
+
+            padding: 40px 25px;
+
+            border-radius: 22px;
+
+            background: white;
+
+            box-shadow:
+            0 7px 25px rgba(0,0,0,0.08);
+        }
+
+        .milk-card h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+
+            font-size: 42px;
+
+            color: #16843b;
+
+            font-weight: bold;
+
+            margin: 15px 0;
+        }
+
+        .per-liter {
+            color: #777;
+            font-size: 16px;
+        }
+
+        /* ================= QUALITY ================= */
+
+        .quality-grid {
+
+            margin-top: 45px;
+
+            display: grid;
+
+            grid-template-columns:
+            repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .quality-card {
+
+            background: white;
+
+            padding: 30px 18px;
+
+            border-radius: 18px;
+
+            box-shadow:
+            0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .quality-icon {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .quality-card h3 {
+            margin-bottom: 8px;
+        }
+
+        /* ================= TIMING ================= */
+
+        .timing {
+
+            background: #111;
+
+            color: white;
+        }
+
+        .timing .section-title {
+            color: #ffe28a;
+        }
+
+        .timing-box {
+
+            max-width: 700px;
+
+            margin: 40px auto 0;
+
+            background: #1d1d1d;
+
+            padding: 35px;
+
+            border-radius: 20px;
+        }
+
+        .time-row {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding: 15px 0;
+
+            border-bottom: 1px solid #444;
+        }
+
+        .time-row:last-child {
+            border-bottom: none;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            background: white;
+        }
+
+        .contact-box {
+
+            max-width: 800px;
+
+            margin: 45px auto 0;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            background: #f7faf7;
+
+            box-shadow:
+            0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        .contact-item {
+
+            margin: 18px 0;
+
+            font-size: 18px;
+        }
+
+        .contact-item strong {
+            color: #16843b;
+        }
+
+        /* ================= MAP ================= */
+
+        .map-section {
+            padding-top: 0;
+            background: white;
+        }
+
+        .map-button {
+            margin-top: 25px;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+
+            background: #0b0b0b;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 35px 20px;
+        }
+
+        footer h2 {
+            color: #ffe28a;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            color: #bbb;
+        }
+
+        .copyright {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                gap: 12px;
+                padding: 14px 15px;
+            }
+
+            nav {
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .hero {
+                min-height: 85vh;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            .milk-prices {
+                grid-template-columns: 1fr;
+            }
+
+            .quality-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .section {
+                padding: 60px 20px;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+            .time-row {
+                flex-direction: column;
+                text-align: center;
+                gap: 5px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            🐄
+        </div>
+
+        <div class="logo-text">
+            <span>महाकाल</span> डेयरी फार्म
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="#home">
+            Home
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
+        <a href="#products">
+            Products
+        </a>
+
+        <a href="#quality">
+            Quality
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            🥛 आपका अपना डेयरी फार्म
+        </div>
+
+        <h1>
+            महाकाल डेयरी फार्म
+        </h1>
+
+        <h2>
+            शुद्धता • ताजगी • भरोसा
+        </h2>
+
+        <p>
+            ताजा और गुणवत्तापूर्ण गाय एवं भैंस का दूध
+            और अन्य डेयरी उत्पाद।
+        </p>
+
+
+        <div class="buttons">
+
+            <a
+                href="tel:9967621160"
+                class="btn btn-call">
+                📞 अभी Call करें
+            </a>
+
+
+            <a
+                href="https://wa.me/919967621160"
+                class="btn btn-whatsapp">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="section about" id="about">
+
+    <h2 class="section-title">
+        हमारे बारे में
+    </h2>
+
+    <p class="section-description">
+        महाकाल डेयरी फार्म में आपका स्वागत है।
+        हमारा उद्देश्य ग्राहकों को ताजा,
+        गुणवत्तापूर्ण और भरोसेमंद डेयरी उत्पाद उपलब्ध कराना है।
+    </p>
+
+
+    <div class="about-container">
+
+
+        <div class="about-card">
+
+            <h3>
+                🐄 हमारा फार्म
+            </h3>
+
+            <p>
+                महाकाल डेयरी फार्म
+                नथईपुर, रायबरेली में स्थित है।
+                हम दूध की गुणवत्ता, साफ-सफाई
+                और ग्राहक के भरोसे को प्राथमिकता देते हैं।
+            </p>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <h3>
+                👤 संचालक
+            </h3>
+
+            <p class="owner">
+                Sanjay Singh
+            </p>
+
+            <br>
+
+            <p>
+                महाकाल डेयरी फार्म
+                की देखरेख और संचालन
+                Sanjay Singh द्वारा किया जाता है।
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="section" id="products">
+
+    <h2 class="section-title">
+        हमारे Products
+    </h2>
+
+    <p class="section-description">
+        महाकाल डेयरी फार्म पर उपलब्ध डेयरी उत्पाद।
+    </p>
+
+
+    <div class="products">
+
+
+        <div class="product-card">
+
+            <div class="product-icon">
+                🥛
+            </div>
+
+            <h3>
+                गाय का दूध
+            </h3>
+
+            <p>
+                ताजा एवं गुणवत्तापूर्ण गाय का दूध।
+            </p>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-icon">
+                🐃
+            </div>
+
+            <h3>
+                भैंस का दूध
+            </h3>
+
+            <p>
+                ताजा और पौष्टिक भैंस का दूध।
+            </p>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-icon">
+                🥣
+            </div>
+
+            <h3>
+                दही
+            </h3>
+
+            <p>
+                ताजा एवं स्वादिष्ट दही।
+            </p>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-icon">
+                🧈
+            </div>
+
+            <h3>
+                देसी घी
+            </h3>
+
+            <p>
+                पारंपरिक स्वाद वाला देसी घी।
+            </p>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-icon">
+                🧀
+            </div>
+
+            <h3>
+                पनीर
+            </h3>
+
+            <p>
+                ताजा डेयरी पनीर।
+            </p>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-icon">
+                🥛
+            </div>
+
+            <h3>
+                अन्य डेयरी उत्पाद
+            </h3>
+
+            <p>
+                डेयरी से जुड़े अन्य उत्पादों के लिए
+                हमसे संपर्क करें।
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PRICE ================= -->
+
+<section class="section milk-section">
+
+    <h2 class="section-title">
+        दूध की कीमत
+    </h2>
+
+    <p class="section-description">
+        हमारे वर्तमान दूध के रेट।
+    </p>
+
+
+    <div class="milk-prices">
+
+
+        <div class="milk-card">
+
+            <div class="product-icon">
+                🐃
+            </div>
+
+            <h3>
+                भैंस का दूध
+            </h3>
+
+            <div class="price">
+                ₹70
+            </div>
+
+            <div class="per-liter">
+                प्रति लीटर
+            </div>
+
+        </div>
+
+
+        <div class="milk-card">
+
+            <div class="product-icon">
+                🐄
+            </div>
+
+            <h3>
+                गाय का दूध
+            </h3>
+
+            <div class="price">
+                ₹50
+            </div>
+
+            <div class="per-liter">
+                प्रति लीटर
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= QUALITY ================= -->
+
+<section class="section" id="quality">
+
+    <h2 class="section-title">
+        हमारी खासियत
+    </h2>
+
+    <p class="section-description">
+        हमारे लिए दूध सिर्फ एक product नहीं,
+        बल्कि ग्राहक के परिवार की जरूरत है।
+    </p>
+
+
+    <div class="quality-grid">
+
+
+        <div class="quality-card">
+
+            <div class="quality-icon">
+                🥛
+            </div>
+
+            <h3>
+                ताजा दूध
+            </h3>
+
+            <p>
+                रोजाना ताजा दूध।
+            </p>
+
+        </div>
+
+
+        <div class="quality-card">
+
+            <div class="quality-icon">
+                🧼
+            </div>
+
+            <h3>
+                स्वच्छता
+            </h3>
+
+            <p>
+                साफ-सफाई पर विशेष ध्यान।
+            </p>
+
+        </div>
+
+
+        <div class="quality-card">
+
+            <div class="quality-icon">
+                ⭐
+            </div>
+
+            <h3>
+                गुणवत्ता
+            </h3>
+
+            <p>
+                अच्छी गुणवत्ता हमारी प्राथमिकता।
+            </p>
+
+        </div>
+
+
+        <div class="quality-card">
+
+            <div class="quality-icon">
+                🤝
+            </div>
+
+            <h3>
+                भरोसा
+            </h3>
+
+            <p>
+                ग्राहकों का भरोसा हमारी पहचान।
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= TIMING ================= -->
+
+<section class="section timing">
+
+    <h2 class="section-title">
+        उपलब्ध समय
+    </h2>
+
+
+    <div class="timing-box">
+
+
+        <div class="time-row">
+
+            <strong>
+                🌅 सुबह
+            </strong>
+
+            <span>
+                6:00 AM – 8:00 AM
+            </span>
+
+        </div>
+
+
+        <div class="time-row">
+
+            <strong>
+                🌆 शाम
+            </strong>
+
+            <span>
+                5:00 PM – 8:00 PM
+            </span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="section contact" id="contact">
+
+    <h2 class="section-title">
+        संपर्क करें
+    </h2>
+
+    <p class="section-description">
+        दूध और डेयरी उत्पादों के बारे में जानकारी के लिए
+        हमसे संपर्क करें।
+    </p>
+
+
+    <div class="contact-box">
+
+
+        <div class="contact-item">
+
+            📞
+
+            <strong>
+                Mobile:
+            </strong>
+
+            9967621160
+
+        </div>
+
+
+        <div class="contact-item">
+
+            💬
+
+            <strong>
+                WhatsApp:
+            </strong>
+
+            9967621160
+
+        </div>
+
+
+        <div class="contact-item">
+
+            👤
+
+            <strong>
+                संचालक:
+            </strong>
+
+            Sanjay Singh
+
+        </div>
+
+
+        <div class="contact-item">
+
+            📍
+
+            <strong>
+                Address:
+            </strong>
+
+            NATHAIPUR, BELA BHELA UTTAR PARA,
+            RAEBARELI, UTTAR PRADESH
+
+        </div>
+
+
+        <div class="buttons">
+
+            <a
+                href="tel:9967621160"
+                class="btn btn-green">
+                📞 Call Now
+            </a>
+
+
+            <a
+                href="https://wa.me/919967621160"
+                class="btn btn-whatsapp">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= LOCATION ================= -->
+
+<section class="section map-section">
+
+    <h2 class="section-title">
+        हमारा Location
+    </h2>
+
+    <p class="section-description">
+
+        महाकाल डेयरी फार्म तक पहुँचने के लिए
+        नीचे दिए गए button पर click करें।
+
+    </p>
+
+
+    <a
+        href="https://maps.app.goo.gl/qWJWj95ZXjRtibYCA"
+        target="_blank"
+        class="btn btn-green map-button">
+
+        📍 Google Maps पर Location देखें
+
+    </a>
+
+</section>
+
+
+
+<!-- =================
